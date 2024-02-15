@@ -1,4 +1,4 @@
 git checkout branch2
-git status pop
-
+git status apply
+git add file4
 git commit -m "add file4"
