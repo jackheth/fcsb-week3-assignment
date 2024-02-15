@@ -1,25 +1,26 @@
 git checkout -b branch1
 
-mkdir dir1
-touch dir1/foo
-mkdir dir3
-touch dir3/bar
-git mv README.md README.md.bak
-git mv LICENSE LICENSE.bak
-touch newfile1
-git add .
-git commit -m "Create branch1 and configure files"
+tree
 
 git checkout -b branch2
+git checkout -b branch3
 
-git mv dir3/bar dir1
-mkdir -p dir1/dir2
-mv dir1/foo dir1/dir2/foo_modified
-touch dir1/dir3/newfile2
-git rm newfile1
-git mv README.md.bak README.md
-git mv LICENSE.bak LICENSE
+mv git-practice-03/dir1/dir2/foo git-practice-03/dir1/dir2/foo_modified
+mv git-practice-03/dir1/dir3/bar git-practice-03/dir1/dir3/newfile2
+
 git add .
-git commit -m "Create branch2 and configure files"
+git commit -m "branch3 updates"
+
+git checkout branch2
+mv git-practice-03/dir1/dir2/foo git-practice-03/dir1/foo
+rm git-practice-03/dir1/dir2
+touch git-practice-03/newfile1
+
+git add .
+git commit -m "branch2 updates"
 
 git checkout main
+cp git-practice-03/dir1/dir3/bar git-practice-03/dir1/dir3/bar_copy
+
+git add .
+git commit -m "main updates"
