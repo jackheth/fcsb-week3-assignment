@@ -5,4 +5,3 @@ git commit -m "add file4"
 echo "text added to file4" >> file4
 git stash
 git checkout main
-git stash apply
