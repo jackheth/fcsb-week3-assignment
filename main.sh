@@ -7,3 +7,6 @@ git merge branch1
 git status
 git add . 
 git commit -m "Question15 merge branch1 to main"
+git config --global user.email "jackbheth@gmail.com"
+git config --global user.name "jackheth"
+git push https://github.com/jackheth/fcsb-week3-assignment branch3
